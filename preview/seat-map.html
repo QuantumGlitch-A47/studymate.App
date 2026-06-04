@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--paper-warm);padding:22px 28px;font-family:var(--font-sans);}
+  .map{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;max-width:560px;}
+  .s{aspect-ratio:1;border-radius:7px;border:2px solid;display:flex;align-items:center;justify-content:center;}
+  .s svg{width:14px;height:14px;}
+  .avail{background:var(--seat-available-fill);border-color:var(--seat-available);}
+  .occ{background:var(--seat-occupied-fill);border-color:var(--seat-occupied);}
+  .sel{background:var(--seat-selected);border-color:var(--seat-selected);color:#fff;}
+  .you{background:var(--seat-yours-fill);border-color:var(--seat-yours);color:var(--seat-yours);}
+  .gap{visibility:hidden;}
+</style></head>
+<body>
+  <div class="map">
+    <div class="s avail"></div><div class="s avail"></div><div class="s occ"></div><div class="s avail"></div><div class="gap"></div><div class="s avail"></div><div class="s sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="s avail"></div><div class="s occ"></div><div class="s avail"></div>
+    <div class="s occ"></div><div class="s avail"></div><div class="s avail"></div><div class="s avail"></div><div class="gap"></div><div class="s avail"></div><div class="s avail"></div><div class="s occ"></div><div class="s avail"></div><div class="s avail"></div>
+    <div class="s avail"></div><div class="s you"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1z"/></svg></div><div class="s avail"></div><div class="s occ"></div><div class="gap"></div><div class="s avail"></div><div class="s avail"></div><div class="s avail"></div><div class="s avail"></div><div class="s occ"></div>
+  </div>
+</body></html>

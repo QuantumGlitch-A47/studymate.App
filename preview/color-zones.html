@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--paper);padding:24px 32px;font-family:var(--font-sans);}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .zone{border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+  .cap{height:8px;}
+  .pad{padding:13px 15px;}
+  .name{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:700;color:var(--ink-900);}
+  .name .dot{width:11px;height:11px;border-radius:3px;}
+  .rule{font-size:12.5px;color:var(--text-muted);margin-top:5px;}
+  .h{font-family:var(--font-mono);font-size:10px;color:var(--text-faint);margin-top:8px;}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="zone">
+      <div class="cap" style="background:var(--zone-silent);"></div>
+      <div class="pad"><div class="name"><span class="dot" style="background:var(--zone-silent);"></span>Silent</div><div class="rule">No conversation</div><div class="h">#C8102E</div></div>
+    </div>
+    <div class="zone">
+      <div class="cap" style="background:var(--zone-quiet);"></div>
+      <div class="pad"><div class="name"><span class="dot" style="background:var(--zone-quiet);"></span>Quiet</div><div class="rule">Whispered conversation</div><div class="h">#E6A200</div></div>
+    </div>
+    <div class="zone">
+      <div class="cap" style="background:var(--zone-group);"></div>
+      <div class="pad"><div class="name"><span class="dot" style="background:var(--zone-group);"></span>Group</div><div class="rule">Conversation &amp; group work</div><div class="h">#1E8A4B</div></div>
+    </div>
+  </div>
+</body></html>

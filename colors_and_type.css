@@ -1,0 +1,247 @@
+/* ============================================================
+   StudyMate — Design Tokens
+   Colors & Type foundations
+   Built on the University of Glasgow public brand palette
+   (University Blue + Cobalt) and the official UofG typefaces
+   (Noto Serif / Noto Sans). StudyMate is an original product
+   brand that adopts these foundations for institutional harmony.
+   ============================================================ */
+
+/* ---- Webfonts (official UofG typefaces, served via Google Fonts) ---- */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ========================================================
+     BRAND PALETTE  (University of Glasgow official colours)
+     ======================================================== */
+  --uofg-blue:      #003865; /* University Blue — primary, PMS 2955 */
+  --uofg-cobalt:    #0075B0; /* Cobalt — secondary bright blue, PMS 307 */
+  --uofg-leaf:      #006630; /* Leaf — green, PMS 348 */
+  --uofg-rust:      #9A3A06; /* Rust — burnt orange, PMS 718 */
+  --uofg-pillarbox: #B30C00; /* Pillarbox — red, PMS 200 */
+  --uofg-thistle:   #951272; /* Thistle — magenta/purple, PMS 241 */
+
+  /* Primary blue tint ramp (derived from University Blue) */
+  --blue-900: #001d36;
+  --blue-800: #002a4d;
+  --blue-700: #003865; /* = University Blue */
+  --blue-600: #0a4d80;
+  --blue-500: #0075B0; /* = Cobalt */
+  --blue-400: #4596c6;
+  --blue-300: #84b9da;
+  --blue-200: #bcd8ec;
+  --blue-100: #e3eef7;
+  --blue-50:  #f1f7fc;
+
+  /* ========================================================
+     NEUTRALS  — warm "paper & ink" academic greys
+     ======================================================== */
+  --ink-900: #131a21; /* near-black headings */
+  --ink-800: #1f2933;
+  --ink-700: #34414c;
+  --ink-600: #4d5a66; /* body text */
+  --ink-500: #6b7785;
+  --ink-400: #919ca8; /* muted / placeholder */
+  --ink-300: #c3cad2;
+  --ink-200: #dde2e8; /* borders */
+  --ink-100: #eef1f4; /* hairlines / track */
+  --ink-50:  #f6f8fa; /* app background */
+  --paper:   #ffffff; /* surfaces / cards */
+  --paper-warm: #fbfaf7; /* warm off-white panels */
+
+  /* ========================================================
+     SEMANTIC  — UI meaning
+     ======================================================== */
+  --primary:        var(--uofg-blue);
+  --primary-hover:  #002a4d;
+  --primary-active: #001d36;
+  --accent:         var(--uofg-cobalt);
+  --accent-soft:    var(--blue-100);
+
+  --success:   var(--uofg-leaf);
+  --success-soft: #e3f1e8;
+  --warning:   var(--uofg-rust);
+  --warning-soft: #fbeadf;
+  --danger:    var(--uofg-pillarbox);
+  --danger-soft: #fae3e1;
+  --feature:   var(--uofg-thistle);
+  --feature-soft: #f6e3f0;
+
+  /* ---- Library study-zone system (University of Glasgow Library) ----
+     Silent (no conversation) · Quiet (whispered) · Group (conversation) */
+  --zone-silent:      #C8102E; /* red */
+  --zone-silent-soft: #fbe7e9;
+  --zone-silent-ink:  #9A0A1E;
+  --zone-quiet:       #E6A200; /* gold */
+  --zone-quiet-soft:  #fbf1d6;
+  --zone-quiet-ink:   #8A5A00;
+  --zone-group:       #1E8A4B; /* green */
+  --zone-group-soft:  #e4f2e9;
+  --zone-group-ink:   #0F6A38;
+
+  /* ---- Seat / space booking states ---- */
+  --seat-available:        var(--uofg-leaf);
+  --seat-available-fill:   #e3f1e8;
+  --seat-selected:         var(--uofg-blue);
+  --seat-selected-fill:    var(--blue-100);
+  --seat-occupied:         var(--ink-300);
+  --seat-occupied-fill:    var(--ink-100);
+  --seat-yours:            var(--uofg-cobalt);
+  --seat-yours-fill:       #dcebf5;
+
+  /* ---- Text roles ---- */
+  --text-strong: var(--ink-900);
+  --text:        var(--ink-700);
+  --text-muted:  var(--ink-500);
+  --text-faint:  var(--ink-400);
+  --text-on-primary: #ffffff;
+  --link: var(--uofg-cobalt);
+
+  /* ---- Surfaces & lines ---- */
+  --surface:     var(--paper);
+  --surface-2:   var(--ink-50);
+  --surface-3:   var(--ink-100);
+  --border:      var(--ink-200);
+  --border-strong: var(--ink-300);
+  --hairline:    var(--ink-100);
+
+  /* ========================================================
+     TYPOGRAPHY
+     ======================================================== */
+  --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-mono:  'Noto Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale (1.250 major-third-ish, tuned) */
+  --text-xs:   0.75rem;   /* 12px — labels, captions */
+  --text-sm:   0.875rem;  /* 14px — secondary UI */
+  --text-base: 1rem;      /* 16px — body */
+  --text-md:   1.125rem;  /* 18px — lead body */
+  --text-lg:   1.375rem;  /* 22px — h4 */
+  --text-xl:   1.75rem;   /* 28px — h3 */
+  --text-2xl:  2.25rem;   /* 36px — h2 */
+  --text-3xl:  3rem;      /* 48px — h1 */
+  --text-4xl:  3.75rem;   /* 60px — display */
+
+  --leading-tight: 1.12;
+  --leading-snug:  1.3;
+  --leading-normal:1.55;
+  --leading-relaxed:1.7;
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.08em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ========================================================
+     SPACING  (4px base)
+     ======================================================== */
+  --space-1: 0.25rem; /* 4 */
+  --space-2: 0.5rem;  /* 8 */
+  --space-3: 0.75rem; /* 12 */
+  --space-4: 1rem;    /* 16 */
+  --space-5: 1.5rem;  /* 24 */
+  --space-6: 2rem;    /* 32 */
+  --space-7: 3rem;    /* 48 */
+  --space-8: 4rem;    /* 64 */
+
+  /* ========================================================
+     RADII
+     ======================================================== */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* ========================================================
+     ELEVATION  (soft, cool-tinted shadows)
+     ======================================================== */
+  --shadow-xs: 0 1px 2px rgba(0, 29, 54, 0.06);
+  --shadow-sm: 0 1px 3px rgba(0, 29, 54, 0.08), 0 1px 2px rgba(0, 29, 54, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 29, 54, 0.08), 0 2px 4px rgba(0, 29, 54, 0.05);
+  --shadow-lg: 0 12px 28px rgba(0, 29, 54, 0.12), 0 4px 8px rgba(0, 29, 54, 0.06);
+  --shadow-xl: 0 24px 48px rgba(0, 29, 54, 0.16);
+  --ring: 0 0 0 3px rgba(0, 117, 176, 0.28); /* focus ring (cobalt) */
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 360ms;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT DEFAULTS
+   Apply to a scope by adding class="sm-type" or use globally.
+   ============================================================ */
+.sm-type, .sm-scope {
+  font-family: var(--font-sans);
+  color: var(--text);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.sm-type h1, .display, h1.sm {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-strong);
+}
+.sm-type h2, h2.sm {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-strong);
+}
+.sm-type h3, h3.sm {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+}
+.sm-type h4, h4.sm {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+}
+.sm-type p, p.sm {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--text);
+}
+.eyebrow, .sm-eyebrow {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.label, .sm-label {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  font-size: var(--text-sm);
+  color: var(--text);
+}
+.mono, code.sm {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}

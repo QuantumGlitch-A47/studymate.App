@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--paper);padding:26px 32px;font-family:var(--font-sans);}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .item{border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+  .bar{height:8px;}
+  .pad{padding:10px 12px;display:flex;flex-direction:column;gap:8px;}
+  .pill{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600;}
+  .h{font-family:var(--font-mono);font-size:10px;color:var(--text-muted);}
+  .dot{width:7px;height:7px;border-radius:50%;}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="item"><div class="bar" style="background:var(--success);"></div><div class="pad"><span class="pill" style="background:var(--success-soft);color:var(--success);"><span class="dot" style="background:var(--success);"></span>Available</span><span class="h">--success #006630</span></div></div>
+    <div class="item"><div class="bar" style="background:var(--accent);"></div><div class="pad"><span class="pill" style="background:var(--accent-soft);color:var(--accent);"><span class="dot" style="background:var(--accent);"></span>Info</span><span class="h">--accent #0075B0</span></div></div>
+    <div class="item"><div class="bar" style="background:var(--warning);"></div><div class="pad"><span class="pill" style="background:var(--warning-soft);color:var(--warning);"><span class="dot" style="background:var(--warning);"></span>Filling up</span><span class="h">--warning #9A3A06</span></div></div>
+    <div class="item"><div class="bar" style="background:var(--danger);"></div><div class="pad"><span class="pill" style="background:var(--danger-soft);color:var(--danger);"><span class="dot" style="background:var(--danger);"></span>Full</span><span class="h">--danger #B30C00</span></div></div>
+  </div>
+</body></html>

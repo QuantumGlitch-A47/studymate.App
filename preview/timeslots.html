@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--paper);padding:24px 32px;font-family:var(--font-sans);}
+  .label{font-size:13px;font-weight:600;color:var(--ink-700);margin-bottom:12px;}
+  .slots{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
+  .slot{text-align:center;padding:9px 0;border-radius:8px;font-size:13px;font-weight:600;border:1.5px solid var(--border);color:var(--ink-700);background:var(--paper);cursor:pointer;}
+  .slot.sel{background:var(--primary);border-color:var(--primary);color:#fff;}
+  .slot.range{background:var(--blue-100);border-color:var(--blue-200);color:var(--primary);}
+  .slot.off{color:var(--ink-300);background:var(--ink-50);border-color:var(--ink-100);text-decoration:line-through;cursor:not-allowed;}
+</style></head>
+<body>
+  <div class="label">Booking window — Wed 31 May</div>
+  <div class="slots">
+    <div class="slot off">08:00</div>
+    <div class="slot">09:00</div>
+    <div class="slot sel">10:00</div>
+    <div class="slot range">11:00</div>
+    <div class="slot range">12:00</div>
+    <div class="slot sel">13:00</div>
+    <div class="slot">14:00</div>
+    <div class="slot">15:00</div>
+    <div class="slot">16:00</div>
+    <div class="slot off">17:00</div>
+    <div class="slot">18:00</div>
+    <div class="slot">19:00</div>
+    <div class="slot">20:00</div>
+    <div class="slot">21:00</div>
+  </div>
+</body></html>

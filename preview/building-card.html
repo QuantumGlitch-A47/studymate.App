@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--ink-50);padding:24px 32px;font-family:var(--font-sans);display:flex;gap:20px;}
+  .card{width:300px;background:var(--paper);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow var(--dur) var(--ease-out);}
+  .card:hover{box-shadow:var(--shadow-lg);}
+  .photo{height:120px;background:linear-gradient(135deg,#003865,#0a4d80);position:relative;display:flex;align-items:flex-end;padding:12px;}
+  .photo .glyph{position:absolute;right:-8px;top:-14px;font-family:var(--font-serif);font-size:120px;font-weight:700;color:rgba(255,255,255,.07);line-height:1;}
+  .open{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);backdrop-filter:blur(4px);color:#fff;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:#5fd08a;}
+  .body{padding:14px 16px 16px;}
+  .body h3{font-family:var(--font-serif);font-size:18px;font-weight:600;color:var(--ink-900);margin:0 0 3px;}
+  .sub{font-size:13px;color:var(--text-muted);margin-bottom:12px;}
+  .stat{display:flex;justify-content:space-between;align-items:center;}
+  .seats{font-size:14px;color:var(--ink-700);}
+  .seats b{color:var(--success);font-weight:700;font-size:15px;}
+  .track{height:6px;background:var(--ink-100);border-radius:999px;margin-top:10px;overflow:hidden;}
+  .fillbar{height:100%;width:62%;background:var(--success);border-radius:999px;}
+  .arrow{width:30px;height:30px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;color:var(--primary);}
+  .arrow svg{width:16px;height:16px;}
+</style></head>
+<body>
+  <div class="card">
+    <div class="photo"><span class="glyph">L</span><span class="open"><span class="dot"></span>Open · closes 02:00</span></div>
+    <div class="body">
+      <div class="stat" style="margin-bottom:2px;"><h3>University Library</h3></div>
+      <div class="sub">Hillhead Street · 12 levels</div>
+      <div class="stat"><span class="seats"><b>148</b> seats free</span><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
+      <div class="track"><div class="fillbar"></div></div>
+    </div>
+  </div>
+</body></html>

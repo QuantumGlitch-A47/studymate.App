@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body{margin:0;background:var(--paper);padding:26px 32px;font-family:var(--font-sans);}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .state{display:flex;flex-direction:column;align-items:center;gap:10px;}
+  .seat{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;border:2px solid;}
+  .seat svg{width:26px;height:26px;}
+  .n{font-size:13px;font-weight:600;color:var(--ink-800);}
+  .d{font-size:11px;color:var(--text-muted);text-align:center;}
+</style></head>
+<body>
+  <div class="grid">
+    <div class="state">
+      <div class="seat" style="background:var(--seat-available-fill);border-color:var(--seat-available);color:var(--seat-available);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="n">Available</div><div class="d">Leaf · tap to book</div>
+    </div>
+    <div class="state">
+      <div class="seat" style="background:var(--seat-selected-fill);border-color:var(--seat-selected);color:var(--seat-selected);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg></div>
+      <div class="n">Selected</div><div class="d">University Blue</div>
+    </div>
+    <div class="state">
+      <div class="seat" style="background:var(--seat-yours-fill);border-color:var(--seat-yours);color:var(--seat-yours);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9H22l-6 4.6 2.3 7-6.3-4.4L5.7 20l2.3-7-6-4.6h7.6z"/></svg></div>
+      <div class="n">Your seat</div><div class="d">Cobalt</div>
+    </div>
+    <div class="state">
+      <div class="seat" style="background:var(--seat-occupied-fill);border-color:var(--seat-occupied);color:var(--ink-400);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></div>
+      <div class="n">Occupied</div><div class="d">Grey · unavailable</div>
+    </div>
+  </div>
+</body></html>
